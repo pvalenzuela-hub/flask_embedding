@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: embedding-api
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python embedding_server.py"
+    envVars:
+      - key: API_KEY
+        value: ${API_KEY}  # Variable se define desde el panel de Render
+
