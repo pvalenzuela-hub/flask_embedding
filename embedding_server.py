@@ -23,7 +23,7 @@ def embed():
             encoding_format="float"
         )
 
-        embeddings = [item.input for item in response.output_text]
+        embeddings = [item.embedding for item in response.data]
         return jsonify({"embeddings": embeddings})
         
 
